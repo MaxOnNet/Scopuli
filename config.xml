@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <database use_inicialise="0">
+        <!-- All -->
+        <mysql database="db_scopuli" password="HReQ6PuWf7yW9t" server="10.19.2.20" user="4gain" charset="utf8" />
+        <redis server="10.19.2.82" port="6379" />
+
+    </database>
+
+    <logging use_file="1" use_syslog="1" >
+        <console level="10" />
+        <file level="10" path="$path/var/log/scopuli.log" when="d" interval="1" count="7"/>
+        <syslog level="30" address_ip="10.19.2.18" address_port="514" />
+    </logging>
+
+    <sphinx>
+        <AutoDocSchemaDisplay path_graph="$path/share/sphinx/static/schema_graph.png" />
+    </sphinx>
+
+    <proxy host="0.0.0.0" port="5555" />
+
+    <pools>
+        <pool name="lindon-pool.sumo" coin="sumo" poolHost="pool.sumo.lindon-pool.win" poolPort="5556" api="https://sumo.lindon-pool.win/api">
+            <user wallet="Sumoo2SeKjvBH8GsjixxSx9HghG6iqht4YqMYTy6qKwaDwPivoCQ5gYdYPBamdrvdGPYUEDpALTTVak9xSi6aS7k4E8sSinQsGi" password="viktor@tatarnikov.org" />
+        </pool>
+
+        <pool1 name="lindon-pool.xmr" coin="xmr" poolHost="monero.lindon-pool.win" poolPort="5555" api="https://monero.lindon-pool.win/api">
+            <user wallet="45YW94hFNeeiCdLYnEkzxxceeeooej4ypX8zjeWdgsKsSyoi3gZRWRVfRJAbUpTNpdPwURUDARjaK569fTPKHnbcKyRSnEu" password="viktor@tatarnikov.org" />
+        </pool1>
+
+        <pool1 name="sumokoin.sumo" coin="sumo" poolHost="pool.sumokoin.com" poolPort="4444" api="https://pool.sumokoin.com:9118">
+            <user wallet="Sumoo2SeKjvBH8GsjixxSx9HghG6iqht4YqMYTy6qKwaDwPivoCQ5gYdYPBamdrvdGPYUEDpALTTVak9xSi6aS7k4E8sSinQsGi" password="viktor@tatarnikov.org" />
+        </pool1>
+
+        <pool1 name="dwarfpool.xmr" coin="xmr" poolHost="xmr-eu.dwarfpool.com" poolPort="9050" api="">
+            <user wallet="45YW94hFNeeiCdLYnEkzxxceeeooej4ypX8zjeWdgsKsSyoi3gZRWRVfRJAbUpTNpdPwURUDARjaK569fTPKHnbcKyRSnEu" password="viktor@tatarnikov.org" />
+        </pool1>
+    </pools>
+</configuration>
