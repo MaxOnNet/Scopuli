@@ -33,7 +33,7 @@ itsdangerous==0.24
 Jinja2==2.9.6
 jinja2-markdown==0.0.3
 logging==0.4.9.6
-lxml==3.8.0
+lxml==4.6.5
 Markdown==2.6.9
 markup==0.2
 MarkupSafe==1.0
