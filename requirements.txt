@@ -40,7 +40,7 @@ MarkupSafe==1.0
 observable==0.3.2
 olefile==0.44
 packaging==16.8
-paramiko==2.2.1
+paramiko==2.10.1
 phonenumbers==8.7.1
 Pillow==4.2.1
 portend==2.1.2
